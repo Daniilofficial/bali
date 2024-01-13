@@ -58,8 +58,6 @@ body {
 }
 /* header */
 header {
-  display: block;
-  content: "";
   position: relative;
   z-index: 100;
   background-repeat: no-repeat;
