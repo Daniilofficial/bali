@@ -60,3 +60,59 @@ window.addEventListener('scroll', () => {
 
 // // Обновляем размеры при изменении размеров окна
 // window.addEventListener('resize', setFontSizeAndWidth);
+    // Функция для проверки ширины экрана и замены изображения
+    function checkScreenWidth() {
+      var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+      // Измените ширину, при которой происходит замена
+      var breakpointWidth = 768;
+
+      // Получение ссылки на изображение
+      var picture = document.getElementById('picture');
+
+      // Проверка и замена изображения
+      if (screenWidth >= breakpointWidth) {
+        picture.src = 'img/mar.png'; // Замените путь на путь ко второму изображению
+      } else {
+        picture.src = 'img/mar-mob.PNG'; // Замените путь на путь к первому изображению
+      }
+    }
+
+    // Вызов функции при загрузке страницы и изменении размера окна
+    window.onload = checkScreenWidth;
+    window.onresize = checkScreenWidth;
+
+    var cyberpunkTexts = [
+      "ABC",
+      "XYZ",
+      "123",
+      "456",
+      "789",
+      "DEF",
+      "GHI",
+      "JKL",
+      "MNO",
+      "PQR"
+      // Добавьте сколько угодно текстов
+    ];
+
+    document.querySelectorAll('h1').forEach(function(h1Element) {
+      applyCyberpunkEffect(h1Element);
+    });
+
+    function applyCyberpunkEffect(element) {
+      var originalText = element.textContent;
+      var currentIndex = 0;
+
+      function changeText() {
+        element.textContent = cyberpunkTexts[currentIndex];
+        currentIndex = (currentIndex + 1) % cyberpunkTexts.length;
+      }
+
+      var intervalId = setInterval(changeText, 100); // Изменение текста каждые 100 миллисекунд (10 раз в секунду)
+
+      setTimeout(function() {
+        clearInterval(intervalId);
+        element.textContent = originalText; // Возвращаем к первоначальному тексту
+      }, 1000 * cyberpunkTexts.length); // Через определенное время (в данном случае, 10 секунд) после начала изменений
+    }
