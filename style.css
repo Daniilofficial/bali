@@ -352,7 +352,13 @@ left: 2vw;
   .container{
     padding: 0 40px;
   }
-  header{
+  #header_img{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
     height: 120vh;
     max-height: 950px;
   }
