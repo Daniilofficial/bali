@@ -37,14 +37,14 @@ img {
 }
 @font-face {
   font-family: "IBM Plex Mono";
-  src: url("../fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
+  src: url("fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 
 /* Второй шрифт */
 @font-face {
   font-family: "Coworking";
-  src: url("../fonts/Coworking.ttf") format("truetype");
+  src: url("fonts/Coworking.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,7 +67,7 @@ header {
   z-index: 1;
   top: 0;
   overflow: hidden;
-  background: url("../img/main.png");
+  background: url("img/main.png");
 }
 header > img {
   position: absolute;
@@ -90,7 +90,7 @@ header::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../img/sun2.png");
+  background-image: url("img/sun2.png");
   mix-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,7 +105,7 @@ header::after {
   width: 25%;
   height: 50%;
   padding: 0 30px 0 30px;
-  background-image: url("../img/sun.png");
+  background-image: url("img/sun.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 6;
@@ -171,20 +171,12 @@ header ul li a {
   margin-top: 9vh;
   position: relative;
   width: 100%;
-  /* height: 100vh; */
-  /* background-color: black; */
   z-index: 100;
-
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   font-size: 24px;
-  /* overflow: hidden; */
 }
-/* .header__inner img{
-} */
 .child {
   width: 100%;
   height: 30%;
@@ -310,7 +302,7 @@ left: 2vw;
 .intro{
   width: 100%;
   height: 100vh;
-  background-image: url("../img/transition.png");
+  background-image: url("img/transition.png");
   z-index: 10;
   margin-top: -52%;
   position: relative;
