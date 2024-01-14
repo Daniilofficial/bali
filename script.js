@@ -46,21 +46,6 @@ window.addEventListener('scroll', () => {
   lastScrollPosition = currentScrollPosition;
 });
 
-
-// const dynamicContainer = document.querySelector('.content_first');
-// const dynamicText = document.getElementById('dynamicText');
-// function setFontSizeAndWidth() {
-//   const containerWidth = dynamicContainer.clientWidth;
-//   dynamicContainer.style.height = `${containerWidth * 22.5}px`; // Устанавливаем высоту в половину ширины
-//   dynamicText.style.fontSize = `${containerWidth * 11.1}px`; // Устанавливаем размер шрифта в 10% ширины
-// }
-
-// // Устанавливаем начальные размеры
-// setFontSizeAndWidth();
-
-// // Обновляем размеры при изменении размеров окна
-// window.addEventListener('resize', setFontSizeAndWidth);
-    // Функция для проверки ширины экрана и замены изображения
     function checkScreenWidth() {
       var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
